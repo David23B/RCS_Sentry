@@ -1,0 +1,15 @@
+<launch>
+
+  <arg name="stateEstimation" default="/Odometry"/>
+  <arg name="registeredScanTopic" default="/cloud_registered"/>
+
+  <node pkg="loam_interface" type="loamInterface" name="loamInterface" output="screen" required="true">
+    <param name="stateEstimationTopic" type="string" value="$(arg stateEstimation)" />
+    <param name="registeredScanTopic" type="string" value="$(arg registeredScanTopic)" />
+    <param name="flipStateEstimation" type="bool" value="true" />
+    <param name="flipRegisteredScan" type="bool" value="false" />
+    <param name="sendTF" type="bool" value="true" />
+    <param name="reverseTF" type="bool" value="false" />
+  </node>
+
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+    <!-- 启动 rm_serial 节点 -->
+    <node name="rm_serial_node" pkg="rm_serial" type="rm_serial_node" output="screen">
+      <!-- 使用 rosparam 标签设置串口端口号参数 -->
+      <rosparam param="/rm_serial/serial_port">/dev/ttyUSB0</rosparam>
+    </node>
+</launch>

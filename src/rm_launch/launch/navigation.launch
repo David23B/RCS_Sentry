@@ -1,0 +1,23 @@
+<launch>
+
+    <!-- localization-->
+    <include file="$(find fast_lio_localization)/launch/localization_MID360.launch" />
+    <!-- <include file="$(find fast_lio)/launch/mapping_mid360.launch" /> -->
+
+    <!-- global planner-->
+    <include file="$(find rm_global_planner)/launch/global_planner.launch" />
+
+    <!-- local planner-->
+    <!-- <include file="$(find vehicle_simulator)/launch/relocalization.launch" /> -->
+    <!-- <node pkg="vehicle_simulator" type="ifrelocal_listener.py" name="ifrelocal_listener" output="screen" /> -->
+
+    <!-- static tf-->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="map2pcdmap" args="0 0 0 0 0 3.1415926 map pcdmap" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="sensor2body" args="0 0 0 0 0 3.1415926 body sensor" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="map2camera_init" args="0 0 0 0 0 3.1415926 vehicle body" />
+  
+    <!-- rm serial-->
+    <!-- <include file="$(find rm_serial)/launch/rm_serial.launch" /> -->
+    
+</launch>
+  

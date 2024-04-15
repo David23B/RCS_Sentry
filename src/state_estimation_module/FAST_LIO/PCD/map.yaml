@@ -1,0 +1,6 @@
+image: /home/xmurcs/Desktop/rcs/src/state_estimation_module/FAST_LIO/PCD/_map.png
+resolution: 0.015
+origin: [-3.020961, -3.026154, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

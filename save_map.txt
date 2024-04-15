@@ -1,0 +1,4 @@
+rosrun map_server map_saver map:=/projected_map -f /home/xmurcs/Desktop/rcs/src/state_estimation_module/FAST_LIO/PCD/map
+
+fast_lio PCD yaml z:0.0
+fast_lio config mid360 pcd_save(pc map)  false
